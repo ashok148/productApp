@@ -40,7 +40,7 @@ const Signup = () => {
                     }
                     label="I agree to all terms and conditions."
                 />
-                <Link to="/home">
+                <Link to="/product">
                     <Button variant="contained" color="primary">Create Account</Button>
                 </Link>
             </div>

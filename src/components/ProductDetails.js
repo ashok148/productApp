@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectedProduct,
   removeSelectedProduct,
 } from "../redux/actions/productsActions";
+import { Button } from "@material-ui/core";
 const ProductDetails = () => {
   const { productId } = useParams();
   let product = useSelector((state) => state.product);
@@ -33,10 +34,14 @@ const ProductDetails = () => {
       ) : (
         <div className="ui placeholder segment">
           <div className="ui two column stackable center aligned grid">
-            <div className="ui vertical divider">AND</div>
+            <div className="ui vertical divider">
+              <Link to="/product">
+                <Button variant="contained" color="primary">Go Back</Button>
+              </Link>
+            </div>
             <div className="middle aligned row">
               <div className="column lp">
-                <img className="ui fluid image" src={image} />
+                <img className="ui fluid image" src={image} height="200px" width="200px" />
               </div>
               <div className="column rp">
                 <h1>{title}</h1>

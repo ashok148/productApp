@@ -32,7 +32,7 @@ const Login = () => {
               }
               label="Remember me"
           />
-         <Link to="/home"> <Button variant="contained" color="primary">Log In</Button></Link>
+         <Link to="/product"> <Button variant="contained" color="primary">Log In</Button></Link>
           </div>
           <Divider varient="middle"/>
           <p className=" text-center">
